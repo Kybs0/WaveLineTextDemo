@@ -15,7 +15,6 @@ namespace WaveLineTextDemo
         public MyLineElement()
         {
             _visualShape = new VisualCollection(this);
-            Height = 20;
         }
         internal void DrawLine(Point startPoint, Point endPoint)
         {
