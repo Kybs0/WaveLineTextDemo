@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using WaveLineDemo2;
 
 namespace WaveLineTextDemo
 {
@@ -31,14 +32,14 @@ namespace WaveLineTextDemo
                 _lastMovedPoint = null;
             }
             //确定结束点，绘制波浪线
-            var myLineElement = new MyLineElement();
+            var myLineElement = new NewLineElement();
             myLineElement.DrawLine((Point)_startPoint, position);
             ContainerCanvas.Children.Add(myLineElement);
             _startPoint = null;
         }
     }
 
-    private MyLineElement _previewLineElement = null;
+    private NewLineElement _previewLineElement = null;
     private Point? _lastMovedPoint = null;
 
     /// <summary>
@@ -56,7 +57,7 @@ namespace WaveLineTextDemo
             {
                 ContainerCanvas.Children.Remove(_previewLineElement);
             }
-            var myLineElement = new MyLineElement();
+            var myLineElement = new NewLineElement();
             myLineElement.DrawLine((Point)_startPoint, position);
             ContainerCanvas.Children.Add(myLineElement);
             _previewLineElement = myLineElement;
